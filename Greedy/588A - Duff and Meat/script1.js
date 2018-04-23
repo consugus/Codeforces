@@ -11,9 +11,20 @@ retorno = eval(n, arr);
 
 //Solution
 function eval(n, arr){
-
+    n = parseInt(n);
+    var daysCosts = new Array(n+1).join("").split("");
+    for(var i = 0 ; i < n ; i++){
+        daysCosts[i] = arr[i].split(" ").map(function(x){ return parseInt(x)});
+    };
+    console.log(giveTheLowestCost(n, daysCosts));
 };
 
+function giveTheLowestCost(n, daysCosts){
+    var answer;
 
+
+
+    return "Hola";
+};
 
 

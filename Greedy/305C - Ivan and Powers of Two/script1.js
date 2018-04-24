@@ -17,10 +17,24 @@ function eval(firstLine, secondLine){
 };
 
 function findQuantityOfNumbers(n, integers){
-    var num = 0;
+    var count = 0;
+    var sumInt = 0;
+    for(var i = 0 ; i < n ; i++){
+        sumInt += integers[i];
+    };
+    console.log("sumInt: " + sumInt);
+    while(true){
+        var tmp = 0;
+        
 
 
-    return num;
+
+
+    };
+
+
+
+    return count;
 };
 
 

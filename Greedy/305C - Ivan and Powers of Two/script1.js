@@ -1,6 +1,9 @@
 //Input
 var firstLine = "4"; var secondLine = "0 1 1 1";   // 0
 // var firstLine = "1"; var secondLine = "3";   // 0
+// var firstLine = "26"; var secondLine = "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2";   // 5
+
+// var firstLine = readline(); var secondLine = readline();
 
 retorno = eval(firstLine, secondLine);
 

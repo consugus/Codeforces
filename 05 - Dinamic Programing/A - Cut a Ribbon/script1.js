@@ -22,31 +22,21 @@ retorno = eval(firstLine);
 //Solution
 function eval(firstLine){
     var nabc = firstLine.split(" ").map(function(x){ return parseInt(x)});
-    var n = nabc[0];
-    var a = nabc[1];
-    var b = nabc[2];
-    var c = nabc[3];
+    var n = nabc[0]; var a = nabc[1]; var b = nabc[2]; var c = nabc[3];
     var results = [];
 
     console.log("tmp: " + nabc + "    n: " + n + "    a: " + a + "    b: " + b + "    c: " + c + "\n\n");
 
     // write(getMaximumCuts(n, a, b, c));
-    console.log(getMax(n, a, b, c));
+    console.log(getMax(n));
 
 
     function getMax(n){
-        if(n in results){
-            return results[n];
-        };
-        if(n == 0){
-            return 0;
-        };
-        if(n < Math.min(a, b, c)){
-            return -n;
-        };
-        console.log(    "getMax(" + n + " - " + a + "): " + getMax(n - a) ,
-                    "    getMax(" + n + " - " + b + "): " + getMax(n - b) ,
-                    "    getMax(" + n + " - " + c + "): " + (getMax(n - c) + 1));
+        if(n in results){ return results[n];};
+        if(n == 0){ return 0;};
+        if(n < Math.min(a, b, c)){ return -n;};
+
+        console.log(    "getMax(" + n + " - " + a + "): " + getMax(n - a) , "    getMax(" + n + " - " + b + "): " + getMax(n - b) , "    getMax(" + n + " - " + c + "): " + (getMax(n - c) + 1));
         var tmp = Math.max(   getMax(n - a) , getMax(n - b) , getMax(n - c) + 1   );
 
         console.log("tmp: " + tmp + "    results: " + results);
@@ -54,9 +44,6 @@ function eval(firstLine){
 
         return results[n];
     };
-
-
-
 };
 
 
